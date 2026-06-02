@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BK Komprehensif - Portal Login</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">BK</span><span class="logo-text">Komprehensif</span></a>
+    <nav class="nav-links"><a href="tentang.html">Tentang</a><a href="layanan.html">Layanan</a><a href="wellbeing.html">Wellbeing</a><a href="karier.html">Karier</a><a href="sumber.html">Sumber Belajar</a><a href="orangtua.html">Orang Tua & Guru</a></nav>
+    <div class="nav-actions"><a href="helpline.html" class="btn-helpline">🆘 Helpline</a><a href="portal.html" class="btn-portal">Masuk Portal</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="tentang.html">Tentang</a><a href="layanan.html">Layanan</a><a href="wellbeing.html">Wellbeing</a><a href="karier.html">Karier</a><a href="sumber.html">Sumber Belajar</a><a href="orangtua.html">Orang Tua & Guru</a><a href="helpline.html" class="btn-helpline">🆘 Helpline</a><a href="portal.html" class="btn-portal">Masuk Portal</a></div>
+</header>
+<main>
+  <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Beranda</a> → Portal Login</div><h1 class="page-title">Portal Login</h1><p class="page-desc">Akses layanan sesuai peran pengguna.</p></div></section>
+  <section class="portal section">
+    <div class="container">
+      <div class="section-header"><div class="section-label">Portal Login</div><h2 class="section-title">Akses layanan sesuai peran pengguna</h2><p class="section-desc">Portal disiapkan sebagai simulasi alur digital untuk siswa, orang tua, guru, dan konselor.</p></div>
+      <div class="portal-grid">
+        <article class="portal-card pc-siswa"><div class="pc-icon">🎒</div><h3>Portal Siswa</h3><ul><li>Daftar konseling</li><li>Isi assessment</li><li>Lihat materi BK</li></ul><button class="btn-portal-login" onclick="showLoginModal('siswa')">Login Siswa</button></article>
+        <article class="portal-card pc-ortu"><div class="pc-icon">👨‍👩‍👧</div><h3>Portal Orang Tua</h3><ul><li>Panduan parenting</li><li>Koordinasi konselor</li><li>Laporan terbatas</li></ul><button class="btn-portal-login" onclick="showLoginModal('ortu')">Login Orang Tua</button></article>
+        <article class="portal-card pc-guru"><div class="pc-icon">📚</div><h3>Portal Guru</h3><ul><li>Kirim referral</li><li>Materi klasikal</li><li>Koordinasi kasus</li></ul><button class="btn-portal-login" onclick="showLoginModal('guru')">Login Guru</button></article>
+        <article class="portal-card pc-konselor"><div class="pc-icon">🏅</div><h3>Dashboard Konselor</h3><ul><li>Kelola jadwal</li><li>Catatan konseling</li><li>Monitoring kasus</li></ul><button class="btn-portal-login" onclick="showLoginModal('konselor')">Login Konselor</button></article>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="modal-overlay" id="loginModal" onclick="closeModal(event)">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeLoginModal()" aria-label="Tutup">×</button>
+    <div class="modal-icon" id="modalIcon">🔑</div>
+    <h3 id="modalTitle">Login Portal</h3>
+    <p id="modalDesc">Masukkan identitas untuk mengakses portal.</p>
+    <div class="modal-form"><input type="text" placeholder="Kode identitas"/><input type="password" placeholder="Kata sandi"/><button class="btn-primary modal-submit" type="button">Masuk Portal</button></div>
+    <p class="modal-note">Demo tampilan: proses login asli perlu backend, enkripsi, dan validasi akun.</p>
+  </div>
+</div>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 Website BK Komprehensif - Sri Nurhayati, NIM 2408093</p><p><a href="index.html">Kembali ke Beranda</a></p></div></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
